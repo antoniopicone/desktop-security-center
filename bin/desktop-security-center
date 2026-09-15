@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Launcher installed by 28-desktop-security-center-setup.sh.
+set -euo pipefail
+
+APP_DIR="${DESKTOP_SECURITY_CENTER_HOME:-$HOME/.local/share/desktop-security-center}"
+export PYTHONPATH="$APP_DIR/src:$APP_DIR/helpers${PYTHONPATH:+:$PYTHONPATH}"
+
+exec python3 "$APP_DIR/src/app.py" "$@"

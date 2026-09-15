@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="it.antoniopicone.DesktopSecurityCenter" path="/it/antoniopicone/DesktopSecurityCenter/">
+    <key name="enabled-modules" type="as">
+      <default>['firewall', 'remote_access', 'network_wifi']</default>
+      <summary>Enabled modules</summary>
+      <description>
+        IDs of the modules shown as active in the sidebar. Present so
+        future modules can be toggled without a UI/code change; not
+        enforced yet in the MVP (every registered module is always shown).
+      </description>
+    </key>
+    <key name="refresh-on-open" type="b">
+      <default>true</default>
+      <summary>Refresh a module's status when it is opened</summary>
+      <description>
+        Matches spec §2: no background polling daemon in the MVP — every
+        module updates on explicit refresh or when its sidebar row is opened.
+      </description>
+    </key>
+  </schema>
+</schemalist>

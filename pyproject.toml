@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+pythonpath = ["src", "helpers"]
+testpaths = ["tests"]
+
+[project]
+name = "desktop-security-center"
+version = "0.1.0"
+description = "GTK4/libadwaita desktop security dashboard for Ubuntu Desktop"
+requires-python = ">=3.10"
